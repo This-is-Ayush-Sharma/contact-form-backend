@@ -3,7 +3,7 @@ const express = require('express');
 const routerUrl = require('./routes/router');
 const cors = require('cors');
 const dotenv = require('dotenv');
-
+const port = process.env.PORT || 3000;
 const app = express();
 
 dotenv.config();
@@ -18,4 +18,4 @@ app.get('/',(req,res)=>{
     res.send("hello world");
 })
 
-app.listen(5000,()=>console.log("listening at port 5000"));
+app.listen(port,()=>console.log("listening at port 5000"));
